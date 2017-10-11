@@ -136,9 +136,10 @@ def add_t(tags):
 
     added = []
     for t in tags:
-        if t not in old_tags:
-            added.append(t)
-            old_tags.append(t)
+        for o in old_tags:
+            if t.lower() != o.lower():
+                added.append(t)
+                old_tags.append(t)
     redis.set('tags', json.dumps(old_tags))
     return added
 
