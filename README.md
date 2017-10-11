@@ -1,5 +1,7 @@
 # API with quotes and tags
 
+Docker, Flask, Redis
+
 # setup
 
         apt install redis-server
@@ -28,11 +30,11 @@
 
 # test
 
-        curl localhost:8042/quotes -H "Content-Type: application/json" -X POST -d '{"quote":"Testi quote", "tags": [ "API", "REST" ]}' 
+        curl localhost:8042/quotes -H "Content-Type: application/json" -X POST -d '{"quote":"Nurture a culture of monitoring everything.", "tags": [ "API", "DevOps", "technology" ]}' 
 
-        curl localhost:8042/quotes -H "Content-Type: application/json" -X POST -d '{"quote":"Testi quote", "tags": [ "API", "REST" ]}' 
+        curl localhost:8042/quotes -H "Content-Type: application/json" -X POST -d '{"quote":"Developer groups of humans are microservices themselves.", "tags": [ "Efficiency", "business" ]}' 
 
-        curl localhost:8042/quotes -H "Content-Type: application/json" -X POST -d '{"quote":"Testi quote2", "tags": [ "GraphQL" ]}' 
+        curl localhost:8042/quotes -H "Content-Type: application/json" -X POST -d '{"quote":"Transient states do not belong in the database.", "tags": [ "scaling", "SQL", "technology" ]}' 
 
         curl localhost:quotes
 
