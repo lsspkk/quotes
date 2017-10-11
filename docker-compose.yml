@@ -1,0 +1,17 @@
+version: '2'  
+services:  
+  quotes:
+    build:
+      context: .
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+    ports:
+      - "8042:8042"
+  redis:
+    image: redis
+    volumes:
+      - redis_data:/data
+volumes:  
+  redis_data:
